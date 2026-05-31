@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly | Premium Fitness & Sports Training</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+    <img src="assets/logo.webp" alt="Stackly Logo" class="brand-logo-img">
+</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="404.html" class="nav-link">Programs</a></li>
+                <li><a href="404.html" class="nav-link">About</a></li>
+                <li><a href="404.html" class="nav-link">Services</a></li>
+                <li><a href="404.html" class="nav-link">Blog</a></li>
+                <li><a href="404.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="404.html" class="btn btn-nav">Login</a>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-slider-section">
+    <div class="hero-slider">
+        
+        <div class="hero-slide" style="background-image: linear-gradient(rgba(17, 17, 17, 0.55), rgba(17, 17, 17, 0.75)), url('assets/slide1.webp');">
+            <div class="hero-container">
+                <div class="hero-slide-content">
+                    <span class="hero-tag">Premium Performance</span>
+                    <h1 class="hero-title">Push Past Your <span>Limits</span></h1>
+                    <p class="hero-desc">Optimize your systemic athletic output with bespoke training regimens engineered by world-class physiologists.</p>
+                    <div class="hero-action-row">
+                        <a href="404.html" class="hero-btn btn-orange">Get Started Now</a>
+                        <a href="404.html" class="hero-btn btn-outline">Explore Programs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-slide" style="background-image: linear-gradient(rgba(17, 17, 17, 0.55), rgba(17, 17, 17, 0.75)), url('assets/slide2.webp');">
+            <div class="hero-container">
+                <div class="hero-slide-content">
+                    <span class="hero-tag">Advanced Nutrition Matrix</span>
+                    <h1 class="hero-title">Fuel For Structural <span>Power</span></h1>
+                    <p class="hero-desc">Align your customized biochemical profile with advanced metabolic tracking frameworks built for rapid recovery.</p>
+                    <div class="hero-action-row">
+                        <a href="404.html" class="hero-btn btn-orange">Claim Your Plan</a>
+                        <a href="404.html" class="hero-btn btn-outline">View Nutrition Pricing</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-slide" style="background-image: linear-gradient(rgba(17, 17, 17, 0.55), rgba(17, 17, 17, 0.75)), url('assets/slide3.webp');">
+            <div class="hero-container">
+                <div class="hero-slide-content">
+                    <span class="hero-tag">Elite Community Hub</span>
+                    <h1 class="hero-title">Train with Global <span>Masters</span></h1>
+                    <p class="hero-desc">Step into an uncompromising workspace calibrated entirely around execution, persistence, and data-backed milestones.</p>
+                    <div class="hero-action-row">
+                        <a href="404.html" class="hero-btn btn-orange">Join the Zone</a>
+                        <a href="404.html" class="hero-btn btn-outline">Meet the Trainers</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <button class="slider-arrow prev-arrow" aria-label="Previous Slide">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
+    </button>
+    <button class="slider-arrow next-arrow" aria-label="Next Slide">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+    </button>
+
+    <div class="slider-dots-container"></div>
+</section>
+
+    <section class="stats-section section-padding reveal">
+        <div class="container stats-grid">
+            <div class="stat-item card-glass">
+                <!-- Icon for Active Members -->
+                <i class="fa-solid fa-users" style="font-size: 2rem; color: #ff7a00; margin-bottom: 12px; display: block;"></i>
+                <h2 class="stat-number" data-target="15000">0</h2>
+                <p class="stat-label">Active Members</p>
+            </div>
+            <div class="stat-item card-glass">
+                <!-- Icon for Elite Trainers -->
+                <i class="fa-solid fa-user-ninja" style="font-size: 2rem; color: #ff7a00; margin-bottom: 12px; display: block;"></i>
+                <h2 class="stat-number" data-target="120">0</h2>
+                <p class="stat-label">Elite Trainers</p>
+            </div>
+            <div class="stat-item card-glass">
+                <!-- Icon for Sports Programs -->
+                <i class="fa-solid fa-dumbbell" style="font-size: 2rem; color: #ff7a00; margin-bottom: 12px; display: block;"></i>
+                <h2 class="stat-number" data-target="25">0</h2>
+                <p class="stat-label">Sports Programs</p>
+            </div>
+            <div class="stat-item card-glass">
+                <!-- Icon for Success Rate -->
+                <i class="fa-solid fa-chart-line" style="font-size: 2rem; color: #ff7a00; margin-bottom: 12px; display: block;"></i>
+                <h2 class="stat-number" data-target="98">0</h2>
+                <p class="stat-label">Success Rate %</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="programs" class="programs-section section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="subtitle">Our Offerings</span>
+                <h2>Elite Training Programs</h2>
+                <p>Push your limits with specialized coaching tiers designed for everyone.</p>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card reveal">
+                    <div class="program-icon"><i class="fa-solid fa-dumbbell"></i></div>
+                    <h3>Strength Training</h3>
+                    <p>Build real power, increase muscle mass, and sculpt your physique with expert guidance.</p>
+                    <a href="404.html" class="program-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="program-card reveal">
+                    <div class="program-icon"><i class="fa-solid fa-person-running"></i></div>
+                    <h3>Cardio Fitness</h3>
+                    <p>Enhance metabolic conditioning, lung health, and maximize stamina performance output.</p>
+                    <a href="404.html" class="program-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="program-card reveal">
+                    <div class="program-icon"><i class="fa-solid fa-spa"></i></div>
+                    <h3>Yoga Classes</h3>
+                    <p>Balance flexibility, deep core activation, and complete mindfulness practice routines.</p>
+                    <a href="404.html" class="program-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="program-card reveal">
+                    <div class="program-icon"><i class="fa-solid fa-trophy"></i></div>
+                    <h3>Sports Coaching</h3>
+                    <p>Technical strategy and agility drills explicitly formatted for competitive athletes.</p>
+                    <a href="404.html" class="program-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="program-card reveal">
+                    <div class="program-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>HIIT Training</h3>
+                    <p>Fast-paced, explosive intervals maximizing fat oxidation in shorter periods.</p>
+                    <a href="404.html" class="program-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="program-card reveal">
+                    <div class="program-icon"><i class="fa-solid fa-user-ninja"></i></div>
+                    <h3>Bodybuilding</h3>
+                    <p>Hypertrophy principles, functional nutrition, and structural aesthetics programming.</p>
+                    <a href="404.html" class="program-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section section-padding">
+        <div class="container about-wrapper">
+            <div class="about-images reveal">
+                <div class="collage-container">
+                    <img src="assets/about1.webp" alt="Gym" class="about-img-1">
+                    <img src="assets/about2.webp" alt="Athlete" class="about-img-2">
+                    <div class="experience-badge">
+                        <h3>10+</h3>
+                        <p>Years Elite Experience</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-content reveal">
+                <span class="subtitle">Who We Are</span>
+                <h2>We Break Limits and Redefine Your True Potential</h2>
+                <p>Stackly is a premier holistic infrastructure built around high-tier sports optimization, advanced exercise science methodologies, and functional mental health training structures.</p>
+                
+                <div class="progress-bars">
+                    <div class="progress-item">
+                        <div class="progress-info"><span>Coaching Quality</span><span>95%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 95%;"></div></div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-info"><span>Nutritional Science Approach</span><span>88%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 88%;"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sports-showcase section-padding ">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="subtitle">Disciplines</span>
+                <h2>Dominate Your Chosen Arena</h2>
+                <p>Explore target arenas curated for specialized professional skill improvements.</p>
+            </div>
+            <div class="sports-grid">
+                <div class="sport-card reveal">
+                    <img src="assets/sport_football.webp" alt="Football">
+                    <div class="sport-overlay"><h3>Football</h3></div>
+                </div>
+                <div class="sport-card reveal">
+                    <img src="assets/sport_basketball.webp" alt="Basketball">
+                    <div class="sport-overlay"><h3>Basketball</h3></div>
+                </div>
+                <div class="sport-card reveal">
+                    <img src="assets/sport_boxing.webp" alt="Boxing">
+                    <div class="sport-overlay"><h3>Boxing</h3></div>
+                </div>
+                <div class="sport-card reveal">
+                    <img src="assets/sport_cricket.webp" alt="Cricket">
+                    <div class="sport-overlay"><h3>Cricket</h3></div>
+                </div>
+                <div class="sport-card reveal">
+                    <img src="assets/sport_tennis.webp" alt="Tennis">
+                    <div class="sport-overlay"><h3>Tennis</h3></div>
+                </div>
+                <div class="sport-card reveal">
+                    <img src="assets/sport_swimming.webp" alt="Swimming">
+                    <div class="sport-overlay"><h3>Swimming</h3></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section class="bmi-section section-padding bg-light">
+    <div class="container bmi-bento-grid">
+        
+        <div class="bmi-intro-card reveal">
+            <span class="subtitle">Biometric Engine</span>
+            <h2>Precision Metrics Matrix</h2>
+            <p>Body Mass Index (BMI) is a foundational metric, but elite execution requires context. Use our interactive matrix to analyze your baseline ratio, adapt weight targets, and unlock your true body composition tier.</p>
+            
+            <div class="bmi-features-list">
+                <div class="bmi-feat-item">
+                    <div class="feat-icon"><i class="fa-solid fa-calculator"></i></div>
+                    <div>
+                        <h4>Dual Metric Units</h4>
+                        <p>Seamlessly toggle between standard cm/kg and imperial ft/in/lbs systems.</p>
+                    </div>
+                </div>
+                <div class="bmi-feat-item">
+                    <div class="feat-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <div>
+                        <h4>Dynamic Visual Feedback</h4>
+                        <p>Watch your biological status chart move across our health zones in real time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bmi-app-card card-glass reveal">
+            
+            <div class="bmi-app-header">
+                <div class="unit-switcher">
+                    <button type="button" class="switch-btn active" data-unit="metric">Metric</button>
+                    <button type="button" class="switch-btn" data-unit="imperial">Imperial</button>
+                </div>
+                <div class="gender-selector">
+                    <button type="button" class="gender-btn active" data-gender="male"><i class="fa-solid fa-mars"></i></button>
+                    <button type="button" class="gender-btn" data-gender="female"><i class="fa-solid fa-venus"></i></button>
+                </div>
+            </div>
+
+            <div class="bmi-inputs-matrix">
+                
+                <div id="metric-inputs-group" class="inputs-subgroup">
+                    <div class="input-block-premium">
+                        <div class="block-label-row">
+                            <label>Height</label>
+                            <span id="height-metric-val">175 cm</span>
+                        </div>
+                        <input type="range" id="height-metric" min="100" max="230" value="175" class="premium-slider">
+                    </div>
+                    <div class="input-block-premium">
+                        <div class="block-label-row">
+                            <label>Weight</label>
+                            <span id="weight-metric-val">70 kg</span>
+                        </div>
+                        <input type="range" id="weight-metric" min="30" max="180" value="70" class="premium-slider">
+                    </div>
+                </div>
+
+                <div id="imperial-inputs-group" class="inputs-subgroup hidden">
+                    <div class="imperial-height-row">
+                        <div class="input-block-premium">
+                            <label for="height-ft">Height (Feet)</label>
+                            <input type="number" id="height-ft" value="5" min="3" max="8">
+                        </div>
+                        <div class="input-block-premium">
+                            <label for="height-in">Height (Inches)</label>
+                            <input type="number" id="height-in" value="9" min="0" max="11">
+                        </div>
+                    </div>
+                    <div class="input-block-premium">
+                        <label for="weight-lbs">Weight (Pounds)</label>
+                        <input type="number" id="weight-lbs" value="150" min="50" max="400">
+                    </div>
+                </div>
+
+                <div class="input-block-premium age-block">
+                    <label for="bmi-age">Target Age Bracket</label>
+                    <div class="age-control-row">
+                        <button type="button" class="age-nav-btn" id="age-minus"><i class="fa-solid fa-minus"></i></button>
+                        <input type="number" id="bmi-age" value="25" min="15" max="90" readonly>
+                        <button type="button" class="age-nav-btn" id="age-plus"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="bmi-dashboard-display">
+                <div class="bmi-score-zone">
+                    <h4 class="display-label">Calculated Score</h4>
+                    <div id="bento-bmi-value">22.9</div>
+                </div>
+                <div class="bmi-status-zone">
+                    <span id="bento-bmi-status" class="status-badge status-normal">Optimal Target</span>
+                    <p id="bento-bmi-advice">Your physiological body ratio is in prime parameters for athletic building blocks.</p>
+                </div>
+            </div>
+
+            <div class="bmi-visual-meter-wrapper">
+                <div class="meter-zones">
+                    <span class="zone-tag">Under</span>
+                    <span class="zone-tag">Optimal</span>
+                    <span class="zone-tag">Over</span>
+                    <span class="zone-tag">Obese</span>
+                </div>
+                <div class="meter-bar-container">
+                    <div class="meter-track"></div>
+                    <div id="meter-indicator" style="left: 45%;"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+    <section id="pricing" class="pricing-section section-padding">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="subtitle">Investment Plans</span>
+                <h2>Choose Your Workout Package</h2>
+                <p>Transparent pricing scaling directly with your personalized ambitions.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card reveal">
+                    <h3>Beginner Plan</h3>
+                    <div class="price">$29<span>/mo</span></div>
+                    <ul class="plan-features">
+                        <li><i class="fa-solid fa-check"></i> Access to all Gym Facilities</li>
+                        <li><i class="fa-solid fa-check"></i> 3 Core Group Classes / Mo</li>
+                        <li><i class="fa-solid fa-check"></i> Locker Room & Showers</li>
+                        <li class="disabled"><i class="fa-solid fa-xmark"></i> Custom Nutrition Strategy</li>
+                        <li class="disabled"><i class="fa-solid fa-xmark"></i> 1-on-1 Master Coaching</li>
+                    </ul>
+                    <a href="404.html" class="btn btn-secondary btn-full">Join Plan</a>
+                </div>
+                <div class="pricing-card featured reveal">
+                    <div class="popular-tag">Most Popular</div>
+                    <h3>Pro Athlete Plan</h3>
+                    <div class="price">$59<span>/mo</span></div>
+                    <ul class="plan-features">
+                        <li><i class="fa-solid fa-check"></i> Unlimited Gym & Field Access</li>
+                        <li><i class="fa-solid fa-check"></i> Unlimited Group Formats</li>
+                        <li><i class="fa-solid fa-check"></i> Custom Nutrition Strategy</li>
+                        <li><i class="fa-solid fa-check"></i> 2 Medical Progress Reviews</li>
+                        <li class="disabled"><i class="fa-solid fa-xmark"></i> 1-on-1 Master Coaching</li>
+                    </ul>
+                    <a href="404.html" class="btn btn-primary btn-full">Join Plan</a>
+                </div>
+                <div class="pricing-card reveal">
+                    <h3>Elite Fitness</h3>
+                    <div class="price">$99<span>/mo</span></div>
+                    <ul class="plan-features">
+                        <li><i class="fa-solid fa-check"></i> Full 24/7 Global Access</li>
+                        <li><i class="fa-solid fa-check"></i> Hyper-Tailored Programming</li>
+                        <li><i class="fa-solid fa-check"></i> Bio-Individual Nutritionist</li>
+                        <li><i class="fa-solid fa-check"></i> 1-on-1 Elite Master Coach</li>
+                        <li><i class="fa-solid fa-check"></i> Complimentary Sports Massage</li>
+                    </ul>
+                    <a href="404.html" class="btn btn-secondary btn-full">Join Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="app-section section-padding bg-light">
+    <div class="container app-asymmetric-wrapper">
+        
+        <div class="app-content-column reveal">
+            <span class="subtitle">Ecosystem Mobility</span>
+            <h2>Your Training Matrix. <br>Unbound.</h2>
+            <p>Sync your biometric data streams seamlessly. Track active workloads, audit physical macro variables, and coordinate real-time performance milestones using our low-latency cloud infrastructure.</p>
+            
+            <ul class="app-spec-list">
+                <li><i class="fa-solid fa-circle-check"></i> Real-time biometric wearable synchronization</li>
+                <li><i class="fa-solid fa-circle-check"></i> Offline caching for remote training environments</li>
+                <li><i class="fa-solid fa-circle-check"></i> Cryptographically secure health logs</li>
+            </ul>
+
+            
+
+            <div class="app-badges-row">
+                <a href="404.html" class="premium-store-btn" aria-label="Download from Apple App Store">
+                    <i class="fa-brands fa-apple"></i>
+                    <div class="btn-lbl-stack">
+                        <span>Download on the</span>
+                        <strong>App Store</strong>
+                    </div>
+                </a>
+                <a href="404.html" class="premium-store-btn" aria-label="Download from Google Play Store">
+                    <i class="fa-brands fa-google-play"></i>
+                    <div class="btn-lbl-stack">
+                        <span>Get it on</span>
+                        <strong>Google Play</strong>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="app-visual-column reveal">
+            <div class="ui-mockup-workspace">
+                
+                <div class="ambient-blur-sphere"></div>
+
+                <div class="floating-glass-card card-chart" data-speed="-1">
+                    <div class="card-chart-hdr">
+                        <span>Heart Rate Variability</span>
+                        <strong class="text-orange">+12%</strong>
+                    </div>
+                    <div class="mini-bar-chart">
+                        <div class="bar" style="height: 40%"></div>
+                        <div class="bar" style="height: 65%"></div>
+                        <div class="bar active" style="height: 85%"></div>
+                        <div class="bar" style="height: 50%"></div>
+                    </div>
+                </div>
+
+                <div class="phone-chassis-canvas">
+                    <div class="phone-screen-viewport">
+                        <div class="phone-notch"></div>
+                        <img src="assets/phone_mockup.webp" alt="App Dashboard Workspace Layout Screen View">
+                    </div>
+                </div>
+
+                <div class="floating-glass-card card-status" data-speed="1.5">
+                    <div class="status-icon-dot"><i class="fa-solid fa-fire"></i></div>
+                    <div class="status-txt-stack">
+                        <strong>Streak Unlocked</strong>
+                        <span>30 Days Target Met</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <section id="trainers" class="trainers-section section-padding">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="subtitle">Experts</span>
+                <h2>Meet Your Masters</h2>
+                <p>Certified physiologists and industry-leading performance elite professionals.</p>
+            </div>
+            <div class="trainers-grid">
+                <div class="trainer-card reveal">
+                    <div class="trainer-img-wrapper">
+                        <img src="assets/trainer1.webp" alt="Alex Carter">
+                        <div class="trainer-socials">
+                            <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="404.html"><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Alex Carter</h3>
+                        <p>Strength Coach</p>
+                    </div>
+                </div>
+                
+                <div class="trainer-card reveal">
+                    <div class="trainer-img-wrapper">
+                        <img src="assets/trainer2.webp" alt="Sarah Lee">
+                        <div class="trainer-socials">
+                            <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="404.html"><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Sarah Lee</h3>
+                        <p>Yoga Expert</p>
+                    </div>
+                </div>
+                 <div class="trainer-card reveal">
+                    <div class="trainer-img-wrapper">
+                        <img src="assets/trainer4.webp" alt="Arjun">
+                        <div class="trainer-socials">
+                            <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="404.html"><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Arjun</h3>
+                        <p>Athletic Trainer</p>
+                    </div>
+                </div>
+                <div class="trainer-card reveal">
+                    <div class="trainer-img-wrapper">
+                        <img src="assets/trainer3.webp" alt="Marcus Vance">
+                        <div class="trainer-socials">
+                            <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="404.html"><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Marcus Vance</h3>
+                        <p>HIIT & Cardio Lead</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="subtitle">Success Records</span>
+                <h2>Stories From Our Athletes</h2>
+            </div>
+            <div class="carousel-container reveal">
+                <div class="testimonial-slider">
+                    <div class="testimonial-card card-glass">
+                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="feedback">"Stackly completely refactored my operational athleticism. The systems-driven approach by coach Alex safely got me back to my peak execution within 3 months!"</p>
+                        <div class="user-meta">
+                            <img src="assets/testimonial1.webp" alt="User 1">
+                            <div>
+                                <h4>Emma Watson</h4>
+                                <p>Marathon Competitor</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card card-glass">
+                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="feedback">"The structure here is world-class. From tracking macros cleanly to the state-of-the-art facilities, it's a premium environment optimized for results."</p>
+                        <div class="user-meta">
+                            <img src="assets/testimonial2.webp" alt="User 2">
+                            <div>
+                                <h4>David Miller</h4>
+                                <p>Powerlifter</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card card-glass">
+                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="feedback">"Stackly is an elite framework. The metabolic tracking alone is worth the subscription. High execution speed, perfect data integration!"</p>
+                        <div class="user-meta">
+                            <img src="assets/testimonial3.webp" alt="User 3">
+                            <div>
+                                <h4>Marcus Aurelius</h4>
+                                <p>Triathlete</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card card-glass">
+                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="feedback">"The coaching and structural aesthetic adjustments here are unparalleled. My alignment and core metrics have never been more balanced!"</p>
+                        <div class="user-meta">
+                            <img src="assets/testimonial4.webp" alt="User 4">
+                            <div>
+                                <h4>Sophia Loren</h4>
+                                <p>Fitness Model</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-dots"></div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div id="lightbox-modal" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Enlarged view">
+    </div>
+
+   
+
+    <section class="faq-section section-padding">
+    <div class="container faq-grid-wrapper">
+        
+        <div class="faq-sticky-intro reveal">
+            <span class="subtitle">Knowledge Base</span>
+            <h2>Frequently Asked <br>Questions</h2>
+            <p>Can’t find the specific configuration data you need? Reach out to our performance desk for direct integration assistance.</p>
+            <a href="404.html" class="faq-support-link">Contact Support Desk <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="faq-accordion-matrix reveal">
+            
+            <div class="accordion-item active">
+                <button class="accordion-trigger" aria-expanded="true">
+                    <span>What metrics are verified by the Real-Time Biometric Sync?</span>
+                    <span class="accordion-icon"><i class="fa-solid fa-plus"></i></span>
+                </button>
+                <div class="accordion-content">
+                    <div class="content-inner">
+                        <p>Our infrastructure synchronizes seamlessly with major consumer wearables to capture Heart Rate Variability (HRV), dynamic VO2 max estimates, structural sleep latencies, and metabolic output indices safely over encrypted pipelines.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-trigger" aria-expanded="false">
+                    <span>How does the custom nutrition algorithm factor age?</span>
+                    <span class="accordion-icon"><i class="fa-solid fa-plus"></i></span>
+                </button>
+                <div class="accordion-content">
+                    <div class="content-inner">
+                        <p>The system evaluates age along with your active BMI scores to predict metabolic decline baselines. This custom curve auto-regulates your daily macro targets to preserve lean structural tissue mass during caloric deficits.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-trigger" aria-expanded="false">
+                    <span>Can I pause my athletic training schedule if injured?</span>
+                    <span class="accordion-icon"><i class="fa-solid fa-plus"></i></span>
+                </button>
+                <div class="accordion-content">
+                    <div class="content-inner">
+                        <p>Yes. You can switch your profile track to "Regenerative Mode" instantly via the mobile application dashboard. This shifts active goals from power building to baseline kinetic rehabilitation blocks.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <section class="newsletter-section section-padding bg-light">
+        <div class="container newsletter-card reveal">
+            <h2>Subscribe To Our Performance Ledger</h2>
+            <p>Get priority alerts on performance strategies, community updates, and premium fitness discounts.</p>
+            <form class="newsletter-form" onsubmit="window.location.href='404.html'; return false;">
+                <input type="email" placeholder="Enter your business email address" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+   
+
+    <footer class="footer">
+    <div class="container footer-grid">
+        <div class="footer-brand">
+            <a href="index.html" class="logo">
+    <img src="assets/logo.webp" alt="Stackly Logo" class="brand-logo-img">
+</a>
+            <p>Redefining structural health parameters through high performance engineering mechanics.</p>
+            <div class="social-links">
+                <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+                <a href="404.html"><i class="fa-brands fa-youtube"></i></a>
+                <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        
+        <div class="footer-links">
+            <h3>Quick Navigation</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="404.html">Programs</a></li>
+                <li><a href="404.html">About</a></li>
+                <li><a href="404.html">Services</a></li>
+                <li><a href="404.html">Blog</a></li>
+                
+            </ul>
+        </div>
+        
+        <div class="footer-links">
+            <h3>Support Hub</h3>
+            <ul>
+                <li><a href="404.html">Privacy Matrix</a></li>
+                <li><a href="404.html">Terms & Licensing</a></li>
+                <li><a href="404.html">Member Portal</a></li>
+                <li><a href="404.html">Contact Desk</a></li>
+            </ul>
+        </div>
+
+        <!-- NEWLY ADDED CONTACT COLUMN (Matches your layout perfectly) -->
+        <div class="footer-links">
+            <h3>Contact Us</h3>
+            <ul>
+                <li><i class="fa-solid fa-envelope" style="margin-right: 8px; color: #ff7a00;"></i> support@stackly.com</li>
+                <li><i class="fa-solid fa-phone" style="margin-right: 8px; color: #ff7a00;"></i> +1 (234) 567-890</li>
+                <li><i class="fa-solid fa-location-dot" style="margin-right: 8px; color: #ff7a00;"></i> Elite HQ, Sector 7</li>
+                <li><i class="fa-solid fa-clock" style="margin-right: 8px; color: #ff7a00;"></i> 24/7 Athlete Support</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom text-center">
+        <p>&copy; 2026 Stackly Inc. Designed for elite athletes worldwide.</p>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

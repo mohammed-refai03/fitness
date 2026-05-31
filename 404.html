@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connection Dropped | Stackly 404</title>
+    <!-- Premium Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome for Sports Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      /* ==========================================================================
+           LIGHT GYM MATRIX STYLING ENGINE
+           ========================================================================== */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f1f5f9; /* Matte light grey canvas */
+        color: #111112;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+        padding: 20px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      /* Subtle modern structural grid overlay pattern */
+      body::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
+        background-size: 30px 30px;
+        z-index: 1;
+      }
+
+      .error-container {
+        max-width: 550px;
+        position: relative;
+        z-index: 10;
+        background: #ffffff;
+        padding: 40px 45px;
+        border-radius: 24px;
+        box-shadow: 0 25px 60px -15px rgba(15, 23, 42, 0.08);
+        border: 1px solid rgba(15, 23, 42, 0.05);
+      }
+
+      /* Kinetic Gym Barbell Stage Layout */
+      .gym-stage {
+        width: 100%;
+        height: 120px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      .barbell-shaft {
+        width: 240px;
+        height: 8px;
+        background: #64748b;
+        border-radius: 4px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 30px;
+      }
+
+      /* Weight plates stack containers */
+      .plate-stack {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        position: absolute;
+      }
+
+      .left-plates {
+        left: 15px;
+        flex-direction: row-reverse;
+      }
+      .right-plates {
+        right: 15px;
+      }
+
+      .weight-plate {
+        background: #000000;
+        border-radius: 4px;
+        border-left: 2px solid #334155;
+        border-right: 2px solid #334155;
+        opacity: 0;
+      }
+
+      /* Plate size categories */
+      .plate-lg {
+        width: 14px;
+        height: 55px;
+      }
+      .plate-md {
+        width: 12px;
+        height: 45px;
+      }
+      .plate-sm {
+        width: 10px;
+        height: 35px;
+        color: #ff7a00;
+      }
+
+      /* Huge Impact Header Typography */
+      h1 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 8rem;
+        font-weight: 900;
+        color: #000000;
+        line-height: 0.85;
+        letter-spacing: -4px;
+        margin-bottom: 20px;
+        display: inline-block;
+      }
+
+      h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: -0.5px;
+        color: #000000;
+        margin-bottom: 15px;
+      }
+
+      h2 span {
+        color: #ff7a00; /* Main Performance Orange */
+      }
+
+      p {
+        color: #64748b;
+        margin-bottom: 35px;
+        line-height: 1.6;
+        font-size: 1rem;
+      }
+
+      /* Action Link Button */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background-color: #000000;
+        color: #ffffff;
+        padding: 14px 36px;
+        text-decoration: none;
+        border-radius: 40px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        box-shadow: 0 6px 20px rgba(15, 23, 42, 0.15);
+        transition: all 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #ff7a00;
+        box-shadow: 0 6px 20px rgba(255, 122, 0, 0.2);
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 768px) {
+        .error-container {
+          padding: 40px 20px;
+        }
+        h1 {
+          font-size: 5.5rem;
+        }
+        h2 {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="error-container">
+      <!-- Barbell Animation Canvas Component -->
+      <div class="gym-stage">
+        <div class="barbell-shaft" id="barbell">
+          <!-- Left Side Plates Stack -->
+          <div class="plate-stack left-plates">
+            <div class="weight-plate plate-lg p-l-1"></div>
+            <div class="weight-plate plate-md p-l-2"></div>
+            <div
+              class="weight-plate plate-sm p-l-3"
+              style="background: #ff7a00"
+            ></div>
+          </div>
+          <!-- Right Side Plates Stack -->
+          <div class="plate-stack right-plates">
+            <div class="weight-plate plate-lg p-r-1"></div>
+            <div class="weight-plate plate-md p-r-2"></div>
+            <div
+              class="weight-plate plate-sm p-r-3"
+              style="background: #ff7a00"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copywriter Content -->
+      <h1 id="error-code">404</h1>
+      <h2 id="error-title">Link <span>Dropped</span></h2>
+      <p id="error-desc">
+        This data layout exceeded its maximum load parameters. The routing
+        segment you are trying to access has split from the core application
+        stack.
+      </p>
+
+      <div>
+        <a href="index.html" class="btn">
+          <i class="fa-solid fa-rotate-right"></i> Return To Home
+        </a>
+      </div>
+    </div>
+
+    <!-- Embedded GSAP Core Libraries via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const codeDisplay = document.getElementById("error-code");
+        const barbell = document.getElementById("barbell");
+
+        // Setup master loop timeline execution
+        const tl = gsap.timeline({ repeat: -1, repeatDelay: 1.5 });
+
+        // Initialize structural configuration before sequence cycles
+        tl.set(".weight-plate", { opacity: 0, scale: 0.3, x: 0 })
+          .set(barbell, { rotation: 0, y: 0 })
+          .set(codeDisplay, { scale: 1, color: "#0f172a", x: 0, y: 0 });
+
+        // 1. Loading Phase: Heavy 45lb base plates slam onto the bar
+        tl.to([".p-l-1", ".p-r-1"], {
+          opacity: 1,
+          scale: 1,
+          duration: 0.4,
+          ease: "back.out(1.5)",
+          stagger: 0.1,
+        });
+
+        // 2. Loading Phase: Medium 25lb plates snap onto the bar
+        tl.to(
+          [".p-l-2", ".p-r-2"],
+          {
+            opacity: 1,
+            scale: 1,
+            duration: 0.4,
+            ease: "back.out(1.5)",
+            stagger: 0.1,
+          },
+          "+=0.1",
+        );
+
+        // 3. Loading Phase: Accent Orange 10lb plates slide on
+        tl.to(
+          [".p-l-3", ".p-r-3"],
+          {
+            opacity: 1,
+            scale: 1,
+            duration: 0.4,
+            ease: "back.out(1.5)",
+            stagger: 0.1,
+          },
+          "+=0.1",
+        );
+
+        // 4. The Crash: The weight limit fails. Barbell tilts sharply
+        tl.to(
+          barbell,
+          {
+            rotation: 18,
+            y: 15,
+            duration: 0.3,
+            ease: "power2.in",
+          },
+          "+=0.3",
+        );
+
+        // 5. Weight plates slide completely off the right side of the tilted barbell
+        tl.to(
+          ".right-plates .weight-plate",
+          {
+            x: 80,
+            opacity: 0,
+            stagger: 0.05,
+            duration: 0.3,
+            ease: "power2.in",
+          },
+          "-=0.1",
+        );
+
+        // 6. Impact Frame: The dropped load violently shakes the primary 404 display text
+        tl.to(
+          codeDisplay,
+          {
+            color: "#ff7a00",
+            keyframes: [
+              { x: -12, y: -4, scale: 1.05, duration: 0.05 },
+              { x: 14, y: 6, duration: 0.05 },
+              { x: -10, y: 3, duration: 0.05 },
+              { x: 6, y: -5, duration: 0.05 },
+              { x: 0, y: 0, scale: 1.05, duration: 0.05 },
+            ],
+          },
+          "-=0.1",
+        )
+
+          // Return text color to standard theme dark shade gently over a short recovery timeline
+          .to(codeDisplay, {
+            color: "#0f172a",
+            duration: 0.6,
+            ease: "power2.out",
+          });
+
+        // Subtle smooth entry sequence for container layout card on initial frame loading
+        gsap.from(".error-container", {
+          opacity: 0,
+          y: 40,
+          duration: 0.8,
+          ease: "power3.out",
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1261,7 +1261,13 @@ h1, h2, h3, h4 {
     .nav-links .nav-link { color: var(--text-dark) !important;    font-size: 1.2rem; }
     .nav-links .nav-link:hover,
     .nav-links .nav-link.active { color: var(--accent-orange) !important; }
-    .btn-nav { display: none; }
+    .btn-nav {
+        display: inline-flex !important;
+        padding: 8px 16px;
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+   
 
     /* Layout stack shifts */
     .hero-wrapper, .about-wrapper, .bmi-wrapper, .app-wrapper, .contact-wrapper, .footer-grid {

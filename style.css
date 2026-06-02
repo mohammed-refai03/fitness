@@ -570,7 +570,261 @@ h1, h2, h3, h4 {
     color: var(--accent-orange);
     gap: 12px;
 }
+  
+/* new section*/
 
+/* ==========================================================================
+   ELITE PROGRAMS MATRIX - CINEMATIC REVEAL STYLE
+   ========================================================================== */
+/* ==========================================================================
+   ELITE PROGRAMS SECTION - COMPLETE REWORKED CSS
+   ========================================================================== */
+
+/* 1. Grid Core Architecture */
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Clean 3 columns on desktop */
+    gap: 30px;
+    padding-top: 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 2. Base Card Setup */
+.program-card {
+    position: relative;
+    height: 380px; 
+    border-radius: 16px;
+    padding: 35px 25px;
+    box-sizing: border-box;
+    overflow: hidden;
+    
+    /* Absolute drawer layout to allow internal details to slide up independently */
+    display: block; 
+    
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    /* Hardware-accelerated smooth transitions for the card lift movement */
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+                box-shadow 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* 3. The Image Background Layer (Always visible, subtle scale up on hover) */
+.program-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1; 
+    transform: scale(1); 
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: -2; 
+}
+
+/* 4. The Linear Dark Overlay Tint (Deepens on hover to keep details readable) */
+.program-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* Soft dark gradient initially so photo stays visible, turning deeper on hover */
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.2) 100%);
+    opacity: 1;
+    transition: background 0.4s ease;
+    z-index: -1; 
+}
+
+/* 5. Perfectly Symmetrical Circle Icons */
+.program-icon {
+    position: absolute;
+    top: 35px; 
+    left: 25px;
+    
+    /* Circular Engine Dimensions */
+    width: 64px;
+    height: 64px;
+    background-color: #474747b2; /* Soft peach backdrop matching your screenshot */
+    border-radius: 50%;
+    
+    /* Grid Axis Centering: Forces FontAwesome icons dead center */
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    
+    font-size: 1.6rem; 
+    color: #ffffff; /* Vibrant brand orange */
+    
+    transform: translateY(0) scale(1);
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+                background-color 0.4s ease, 
+                color 0.4s ease;
+    z-index: 3; /* Cuts directly above overlay masks */
+}
+
+/* Keeps FontAwesome structural alignments clean */
+.program-icon i {
+    display: block;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+/* 6. Static Text Heading (White by default over background images) */
+.program-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff; 
+    position: absolute;
+    bottom: 35px; /* Pinned cleanly at the bottom container edge initially */
+    left: 25px;
+    right: 25px;
+    margin: 0;
+    transform: translateY(0);
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* 7. Hidden Content Elements (Revealed below the card floor line) */
+.program-card p {
+    position: absolute;
+    bottom: -120px; /* Completely hidden underneath the card frame boundary */
+    left: 25px;
+    right: 25px;
+    color: rgba(255, 255, 255, 0.85); 
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0; 
+    
+    /* Staggered transition delay so it animates slightly after the card lift */
+    transition: opacity 0.4s ease 0.1s, 
+                bottom 0.5s cubic-bezier(0.25, 1, 0.5, 1) 0.05s;
+}
+
+.program-link {
+    position: absolute;
+    bottom: -40px; /* Pushed down past the paragraph element */
+    left: 25px;
+    color: var(--accent-orange, #ff7a00); 
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease 0.2s, bottom 0.5s cubic-bezier(0.25, 1, 0.5, 1) 0.1s;
+}
+
+.program-link i {
+    transition: transform 0.3s ease;
+}
+
+
+/* ==========================================================================
+   HOVER STATE INTERACTION ENGINE
+   ========================================================================== */
+
+.program-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.4);
+}
+
+/* Micro-zoom photo lens adjustment on card hover */
+.program-card:hover::before {
+    transform: scale(1.06);
+}
+
+/* Darken the overlay background gradient to preserve text readability */
+.program-card:hover::after {
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.6) 100%);
+}
+
+/* Flip icon colors into high-contrast inverted layout mode */
+.program-card:hover .program-icon {
+    background-color: var(--accent-orange, #ff7a00);
+    color: #ffffff;
+    transform: translateY(-4px) scale(1.05);
+}
+
+/* 🛠️ STEP 1: Shift the heading title upward to yield layout space below it */
+.program-card:hover h3 {
+    transform: translateY(-165px); 
+}
+
+/* 🛠️ STEP 2: Slide up and fade in description text into the cleared area space */
+.program-card:hover p {
+    opacity: 1;
+    bottom: 75px; 
+}
+
+/* 🛠️ STEP 3: Slide up and unfold the action link right at the base floor */
+.program-card:hover .program-link {
+    opacity: 1;
+    bottom: 35px; 
+}
+
+/* Micro-interaction on arrow inside action link element */
+.program-link:hover i {
+    transform: translateX(6px);
+}
+
+
+/* ==========================================================================
+   BACKGROUND ASSET IMAGES (MAPS DIRECTLY TO YOUR 6 CARDS)
+   ========================================================================== */
+.program-card:nth-child(1)::before { background-image: url('assets/strength.webp'); }
+.program-card:nth-child(2)::before { background-image: url('assets/cardio.webp'); }
+.program-card:nth-child(3)::before { background-image: url('assets/yoga.webp'); }
+.program-card:nth-child(4)::before { background-image: url('assets/sports.webp'); }
+.program-card:nth-child(5)::before { background-image: url('assets/hiit.webp'); }
+.program-card:nth-child(6)::before { background-image: url('assets/bodybuilding.webp'); }
+
+
+/* ==========================================================================
+   FLUID RESPONSIVE SYSTEM MEDIA QUERIES
+   ========================================================================== */
+
+/* Medium Screens / Laptops (Max 1024px) */
+@media (max-width: 1024px) {
+    .programs-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+}
+
+/* Tablets & Mobile Displays (Max 768px) */
+@media (max-width: 768px) {
+    .programs-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .program-card { height: 360px; padding: 30px 24px; }
+    .program-icon { top: 30px; left: 24px; width: 56px; height: 56px; font-size: 1.4rem; }
+    .program-card h3 { font-size: 1.35rem; bottom: 30px; left: 24px; }
+    
+    /* Scale hover transitions gracefully on smaller viewports */
+    .program-card:hover h3 { transform: translateY(-145px); }
+    .program-card:hover p { bottom: 65px; left: 24px; right: 24px; }
+    .program-card:hover .program-link { bottom: 30px; left: 24px; }
+}
+
+/* Smart Phones (Max 576px) */
+@media (max-width: 576px) {
+    .programs-grid { grid-template-columns: 1fr; gap: 24px; }
+    .program-card { height: auto; min-height: 340px; display: flex; flex-direction: column; justify-content: flex-end; padding: 30px 24px; }
+    
+    /* 📱 Touch Optimization: Mobile viewports bypass sliding drawer states since true mouse hovers don't exist */
+.program-card h3 { font-size: 1.35rem; bottom: 30px; left: 24px; }
+    
+    /* Scale hover transitions gracefully on smaller viewports */
+    .program-card:hover h3 { transform: translateY(-145px); }
+    .program-card:hover p { bottom: 65px; left: 24px; right: 24px; }
+    .program-card:hover .program-link { bottom: 30px; left: 24px; }}
+
+/* Ultra Narrow Viewports (Max 330px) */
+@media (max-width: 330px) {
+    .program-card { padding: 24px 16px; }
+    .program-card h3 { font-size: 1.25rem; }
+    .program-card p { font-size: 0.88rem; line-height: 1.5; }
+}
 /* ==========================================================================
    5. ABOUT SECTION
    ========================================================================== */
